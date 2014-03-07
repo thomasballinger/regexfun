@@ -106,9 +106,7 @@ combine_ors = lambda tree: combine_operators(tree, And)
 simplify = lambda tree: run_until_unchanged(tree, [combine_ors, combine_ands])
 
 if __name__ == '__main__':
-    import doctest
     import sys
-    doctest.testmod()
     if len(sys.argv) == 3:
         print sys.argv[1], sys.argv[2]
         p = parse(sys.argv[1])
